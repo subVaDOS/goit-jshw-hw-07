@@ -25,13 +25,13 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery');
+const galleryEl = document.querySelector('.gallery');
 
 const galleryMarkup = images
   .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="300"></li>`)
   .join('');
 
-galleryEl.insretAdjacentHTML(`beforeend`, galleryMarkup);
-galleryEl.style.displey = `flex`;
-galleryEl.style.flexWrap = `wrap`;
-galleryEl.style.gap = `10px`;
+galleryEl.insertAdjacentHTML('beforeend', galleryMarkup);
+galleryEl.style.display = 'flex';
+galleryEl.style.flexWrap = 'wrap';
+galleryEl.style.gap = '10px';
